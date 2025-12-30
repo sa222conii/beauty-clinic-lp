@@ -312,53 +312,65 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .header .nav {
         display: none;
         /* Simplified for mockup */
     }
 
-    .woman {
-        position: relative;
-        right: auto;
-        width: 120%;
-        margin-left: -10%;
-        margin-top: 20px;
-        order: 1;
-    }
-
     .fv-content {
         flex-direction: column;
         height: auto;
-        padding-top: 40px;
+        padding-top: 20px;
+    }
+
+    .woman {
+        width: 100%;
+        order: 1;        
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 20px;
+        margin-bottom: -20px;
+    }
+
+    .woman img {
+        width: 80%;
+        max-width: 350px;
     }
 
     .fv-text-box {
+        width: 100%;
         order: 2;
         padding: 40px 20px;
         text-align: center;
     }
 
+    .fv-text-inner {
+        align-items: center;
+        width: 100%;
+    }
+
     .fv-badge {
-        top: 0px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-5deg);
+        margin-left: 0;
+        margin-bottom: 15px;
         width: 80px;
         animation: floating-sp 3s ease-in-out infinite;
     }
 
+    .fv-catch-main {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .fv-catch-sub {
+        font-size: 1rem;
+        text-align: center;
+    }
+
     @keyframes floating-sp {
-        0% {
-            transform: translateX(-50%) translateY(0) rotate(-5deg);
-        }
-
-        50% {
-            transform: translateX(-50%) translateY(-10px) rotate(-3deg);
-        }
-
-        100% {
-            transform: translateX(-50%) translateY(0) rotate(-5deg);
-        }
+        0% {transform: translateX(-50%) translateY(0) rotate(-5deg);}
+        50% {transform: translateX(-50%) translateY(-10px) rotate(-3deg);}
+        100% {transform: translateX(-50%) translateY(0) rotate(-5deg);}
     }
 
     .problem-list {
